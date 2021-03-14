@@ -1,0 +1,168 @@
+/*******************************
+	Table of Contents
+
+	1.0 Typography
+    2.0 General Styles	
+	3.0 Content Styles 
+	4.0 Media Queries
+*******************************/
+
+/*----------------------------------------------*/
+/* 1.0 Typography */
+/*----------------------------------------------*/
+@font-face {
+	font-family: 'HelveticaNeueLTPro-Bd';
+	src: url('../fonts/neueltpro-bd-webfont.eot');
+	src: url('../fonts/neueltpro-bd-webfont.eot.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/neueltpro-bd-webfont.woff') format('woff'),
+	     url('../fonts/neueltpro-bd-webfont.ttf')  format('truetype'),
+	     url('../fonts/neueltpro-bd-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTPro-Lt';
+	src: url('../fonts/neueltpro-lt-webfont.eot');
+	src: url('../fonts/neueltpro-lt-webfont.eot.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/neueltpro-lt-webfont.woff') format('woff'),
+	     url('../fonts/neueltpro-lt-webfont.ttf')  format('truetype'),
+	     url('../fonts/neueltpro-lt-webfont.svg#svgFontName') format('svg');
+}
+
+/*----------------------------------------------*/
+/* 2.0 General Styles */
+/*----------------------------------------------*/
+body 
+{
+    margin: 20px;
+    color: #cccccc;
+    background: url(../images/bg-pattern.jpg);
+	background-position: 50% 0;
+    font-family: "HelveticaNeueLTPro-Lt", Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    margin: 0px;
+    font-size: 120px;
+	font-family: "HelveticaNeueLTPro-Bd", Arial, Helvetica, sans-serif;
+}
+h2
+{
+	font-family: "HelveticaNeueLTPro-Lt", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 19px;
+}
+
+/*----------------------------------------------*/
+/* 3.0 Content Styles */
+/*----------------------------------------------*/
+.container404{width:960px; text-align: center; margin:0 auto; }
+.right-section{width: 640px; margin:0 auto; }
+
+.dark{
+	text-shadow: 0 -1px 0 rgba(0,0,0,.6) !important;
+	color: #abb2bf !important;
+}
+.dark .logo{margin:0 0 40px 0;}
+.dark .logo a{
+	text-decoration:none;
+	font-family: "HelveticaNeueLTPro-Bd", Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#abb2bf ;
+}
+.dark .logo img
+{
+	width:24px;
+	height:24px;
+	border:0;
+	vertical-align:bottom;
+	margin:0 10px -2px 0;
+}
+
+.btn{
+	margin:40px 0;
+	display: inline-block;
+	width: auto;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 13px;
+	line-height: 18px;
+	text-decoration: none;
+	background: #757e8e;
+	color: #fff;
+	text-shadow: none;
+	text-transform: uppercase;
+	font-family: "HelveticaNeueLTPro-Bd", Arial, Helvetica, sans-serif;
+}
+.btn:hover{
+	background: #4175cb;
+	color: #fff;
+}
+.board-area
+{
+    width: 320px;
+	margin:0 auto;
+	background: url(../images/board.jpg) no-repeat;
+	background-size: 100%;
+}
+
+.board-area canvas{
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
+	box-shadow: 0 0 5px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.08), 0 1px 4px rgba(0,0,0,.3) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.08), 0 1px 4px rgba(0,0,0,.3) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,.08), 0 1px 4px rgba(0,0,0,.3) inset;
+}
+
+#message
+{
+    margin: 10px 0 15px;
+    font-size: 14px;
+    font-style: italic;
+}
+.separator-dark{
+	width:320px;
+	height:11px;
+	background: url(../images/separator-dark.png);
+	margin: 0 auto 20px auto;
+}
+.clear{clear:both}
+
+.social a img{width:20px;}
+.social a img:hover
+{
+	-ms-filter: "alpha(opacity=70)";
+	filter: alpha(opacity=70);
+	opacity: .7;
+	-khtml-opacity: .7;
+	-moz-opacity: .7;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-o-transition: all .2s;
+	-ms-transition: all .2s;
+	transition: all .2s;
+}
+.iphone{
+	padding:130px 0 90px;
+	background: url(../images/bg-iphone.png) top center no-repeat;
+}
+/*----------------------------------------------*/
+/* 4.0 Media Queries */
+/*----------------------------------------------*/
+@media only screen and (max-width : 1000px) {
+	body{margin:20px 0;}
+	.container404{width:100%; margin:0 auto}
+	.right-section{width:100%}
+}
+
+@media only screen and (max-width : 400px) {
+	body{margin:20px 0;}
+	.container404{width:100%; margin:0 auto}
+	.right-section{width:100%}
+	.iphone{
+		background:none;
+		padding: 0;
+	}
+}
